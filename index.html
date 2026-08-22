@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodita | Belleza Consciente</title>
+    
+    <!-- Metadatos SEO y Nombre de Sitio para Google -->
+    <meta property="og:site_name" content="Afrodita Belleza Consciente">
+    <meta property="og:title" content="Afrodita | Belleza Consciente">
+    <meta property="og:description" content="Centro de estética facial y corporal enfocado en el cuidado natural y consciente de la piel.">
+    
+    <!-- Schema.org JSON-LD para Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Afrodita Belleza Consciente",
+      "alternateName": "Afrodita",
+      "url": "https://afrodita-belleza.vercel.app/"
+    }
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -343,7 +360,7 @@
                     </div>
                 </a>
                 <a href="https://www.instagram.com/afroditabellezaconsciente/" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Instagram Post 3">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Instagram Post 3">
                     <div class="absolute inset-0 bg-afrodita-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
@@ -414,7 +431,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">Ubicación</h4>
-                                <p class="text-sm text-gray-600">Buenos Aires, Argentina (Atención con turno programado)</p>
+                                <p class="text-sm text-gray-600">Gral. Rondeau 783, Monte Grande, Buenos Aires</p>
                             </div>
                         </div>
 
@@ -424,7 +441,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">WhatsApp / Teléfono</h4>
-                                <a href="https://wa.me/5491112345678" target="_blank" class="text-sm text-afrodita-600 hover:underline font-medium">+54 9 11 1234-5678</a>
+                                <a href="https://wa.me/5491136869895" target="_blank" class="text-sm text-afrodita-600 hover:underline font-medium">011 3686-9895</a>
                             </div>
                         </div>
 
@@ -488,12 +505,17 @@
                 </div>
 
                 <div class="flex space-x-6 text-xl">
-                    <a href="https://www.instagram.com/afroditabellezaconsciente/" target="_blank" class="hover:text-afrodita-300 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/5491112345678" target="_blank" class="hover:text-afrodita-300 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/afroditabellezaconsciente/" target="_blank" class="hover:text-afrodita-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5491136869895" target="_blank" class="hover:text-afrodita-300 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
 
-                <div class="text-xs text-gray-400">
-                    &copy; 2026 Afrodita Belleza Consciente. Todos los derechos reservados.
+                <div class="flex flex-col md:items-end gap-1 text-center md:text-right">
+                    <div class="text-xs text-gray-400">
+                        &copy; 2026 Afrodita Belleza Consciente. Todos los derechos reservados.
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        Diseñado por <a href="https://hlucianodesign.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-afrodita-400 hover:text-afrodita-300 font-semibold underline decoration-afrodita-500/50 hover:decoration-afrodita-300 transition-colors">Hernán A. Luciano</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -611,7 +633,7 @@
 
     <!-- JAVASCRIPT APP LOGIC -->
     <script>
-        const apiKey = ""; // Clave inyectada en runtime si aplica
+        const apiKey = "";
 
         // Mobile Menu Toggle
         function toggleMobileMenu() {
@@ -647,7 +669,7 @@
 
             const message = `Hola Afrodita! Mi nombre es ${name}. Me gustaría reservar un turno para ${service} el día ${date} en el turno ${time}. ¿Tienen disponibilidad?`;
             const encodedMsg = encodeURIComponent(message);
-            window.open(`https://wa.me/5491112345678?text=${encodedMsg}`, '_blank');
+            window.open(`https://wa.me/5491136869895?text=${encodedMsg}`, '_blank');
             closeBookingModal();
         }
 
@@ -658,7 +680,7 @@
             const query = e.target.elements[2].value;
 
             const msg = `Hola! Soy ${name} (Tel: ${phone}). Mi consulta es: ${query}`;
-            window.open(`https://wa.me/5491112345678?text=${encodeURIComponent(msg)}`, '_blank');
+            window.open(`https://wa.me/5491136869895?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         // Lógica Asesora Virtual
@@ -780,21 +802,7 @@
         function formatMarkdown(str) {
             return str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
         }
-
-        <!-- Afrodita Belleza Consciente (Open Graph) -->
-<meta property="og:site_name" content="Afrodita Belleza Consciente">
-
-<!-- Datos Estructurados de Sitio Web (Schema JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Afrodita Belleza Consciente",
-  "alternateName": "Afrodita",
-  "url": "https://afrodita-belleza.vercel.app/"
-}
-</script>
-
     </script>
 </body>
 </html>
+```eof
